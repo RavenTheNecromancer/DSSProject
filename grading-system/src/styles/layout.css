@@ -1,0 +1,32 @@
+.content{
+    background-color: bisque;
+    min-height: 100vp;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+header{
+    grid-area: header;
+    background-color: black;
+    color: aqua;
+}
+
+main{
+    grid-area: main;
+    background-color: aliceblue;
+}
+
+aside{
+    grid-area: aside;
+    background-color: aquamarine;
+}
+
+footer{
+    grid-area: footer;
+    background-color: aqua;
+}
