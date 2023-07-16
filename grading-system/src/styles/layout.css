@@ -1,6 +1,6 @@
 .content{
     background-color: bisque;
-    min-height: 100vp;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2em;
@@ -10,13 +10,13 @@
     "footer footer";
 }
 
-header{
+.navbar{
     grid-area: header;
     background-color: black;
     color: aqua;
 }
 
-main{
+.content-list{
     grid-area: main;
     background-color: aliceblue;
 }

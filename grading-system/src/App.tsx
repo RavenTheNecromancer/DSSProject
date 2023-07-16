@@ -14,29 +14,45 @@ function App() {
     date: new Date(),
   };
 
-  return (
-    <>
-      <div className="content">
-        <header className="navbar">
-          <h1>Grading System</h1>
-        </header>
+  let grade2 : Grade = {
+    id: 2,
+    studentFirstName: "Monka",
+    studentLastName: "Ludata",
+    subject: "Bulgarski",
+    score: 6,
+    date: new Date(),
+  };
 
-        <main className="list-section">
+  let grade3 : Grade = {
+    id: 1,
+    studentFirstName: "Sa6o",
+    studentLastName: "Sa6ov",
+    subject: "Istoriq",
+    score: 2,
+    date: new Date(),
+  };
+  
+  return (
+      <div className="content">
+
+        <div className="navbar">
+          <h1>Grading System</h1>
+        </div>
+
+        <div className="content-list">
           <ul className="items">
             <li>dvoika</li>
             <li>Troika</li>
             <li>4vorka</li>
           </ul>
-        </main>
+        </div>
 
-        <aside>
+        <div className='content-details'>
           This is details!
-        </aside>
-        
+        </div>
         
         <footer>This is footer</footer>
       </div>
-    </>
   );
 }
 
