@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles/App.css';
 import { Grade } from './interfaces';
 import GradeList from './components/GradeList';
+import GradeDetails from './components/GradeDetails';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     subject: "Matematika",
     score: 4,
     date: new Date(),
+    active: true,
   };
 
   let grade2 : Grade = {
@@ -21,6 +23,7 @@ function App() {
     subject: "Bulgarski",
     score: 6,
     date: new Date(),
+    active: true,
   };
 
   let grade3 : Grade = {
@@ -30,6 +33,7 @@ function App() {
     subject: "Istoriq",
     score: 2,
     date: new Date(),
+    active: true,
   };
 
   //initial grade array
@@ -79,7 +83,7 @@ function App() {
         </div>
 
         <div className='content-details'>
-          
+          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
         </div>
         
         <footer>This is footer</footer>
