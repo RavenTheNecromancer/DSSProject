@@ -2,8 +2,8 @@ import React, { useState, ChangeEvent, FormEvent, useEffect, ChangeEventHandler}
 import { Grade } from '../interfaces';
 
 interface Props{
-    onSave: (grade : Grade) => void;
-    onUpdate: (grade : Grade) => void;
+    onSave: (grade: Grade) => void;
+    onUpdate: (grade: Grade) => void;
     selectedGrade : Grade;
 }
 
@@ -23,7 +23,8 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
 
     useEffect(() => {
         if (props.selectedGrade.active){
-            setGrade(selectedGrade);
+            //now updates the details section (previous error => used selectedGrade directly from hooks instead props.selectedGrade)
+            setGrade(props.selectedGrade);
         }
         else{
             handleClear();
@@ -59,22 +60,22 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
             <h2>Grade Details:</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                <label htmlFor="firstName">First Name:</label>
+                <label htmlFor="studentFirstName">First Name:</label>
                 <input
                     type="text"
                     id="field1"
-                    name="firstName"
+                    name="studentFirstName"
                     value={selectedGrade.studentFirstName}
                     onChange={handleInputChange}
                     required
                 />
                 </div>
                 <div>
-                <label htmlFor="lastName">Last Name:</label>
+                <label htmlFor="studentLastName">Last Name:</label>
                 <input
                     type="text"
                     id="field2"
-                    name="lastName"
+                    name="studentLastName"
                     value={selectedGrade.studentLastName}
                     onChange={handleInputChange}
                     required
@@ -97,6 +98,7 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
                     type="number"
                     id="field4"
                     name="score"
+                    min="2" max="6"
                     value={selectedGrade.score}
                     onChange={handleInputChange}
                     required
@@ -113,10 +115,10 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
                     required
                 />
                 </div>
-                <button id='saveButton' type='submit'>Save</button>
+                <button className='button-details' id='saveButton' type='submit'>Save</button>
             </form>
 
-            <button id='clearButton' onClick={handleClear}>Clear</button>
+            <button className='button-details' id='clearButton' onClick={handleClear}>Clear</button>
 
         </>
     );
