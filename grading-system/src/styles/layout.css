@@ -20,6 +20,7 @@
 .content-list{
     grid-area: main;
     background-color: aliceblue;
+    margin-left: 1em;
 }
 
 aside{
@@ -88,6 +89,18 @@ li{
     display: flex;
     flex-direction: column;
     text-align:justify;
+    border: 1px solid lightgrey;
+    background-color: aliceblue;
+    margin-right: 1em;
+}
+
+.content-details h2{
+    margin-left: 10px;
+}
+
+#saveButton,
+#clearButton{
+    margin-left: 1em;
 }
 
 #field1,
@@ -99,12 +112,26 @@ li{
 #field4{
     max-width: 2em;
 }
-/* 
-#clearButton{
-    align-self: center;
-} */
+
+label{
+    margin-left: 1em;
+}
 
 
+
+#field1,
+#field2,
+#field3,
+#field4,
+#field5{
+    margin: 1em 1em 1em 1em;
+}
+
+img{
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
 
 footer{
     text-align: center;

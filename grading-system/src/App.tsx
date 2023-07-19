@@ -3,6 +3,7 @@ import './styles/App.css';
 import { Grade } from './interfaces';
 import GradeList from './components/GradeList';
 import GradeDetails from './components/GradeDetails';
+import image from './grade.png'
 
 function App() {
 
@@ -76,7 +77,7 @@ function App() {
 
         <div className="navbar">
           <h1>Grading System</h1>
-          <img src="grade.png" alt="image" />
+          <img src={image} alt="image" />
         </div>
 
         <div className="content-list">
