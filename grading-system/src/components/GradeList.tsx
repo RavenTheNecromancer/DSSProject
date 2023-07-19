@@ -38,12 +38,12 @@ const GradeList: React.FC<Props> = (props : Props) =>
             {props.grades.length === 0 ? <h3>No Grades in entry</h3> : null}
             {props.grades.map((item) => (
                 <li key={item.id} onClick={(e) => {handleClick(item.id, isGradeDeleted) }}>
-                    <p className="id">{item.id}</p>
-                    <p className="field1">{item.studentFirstName}</p>
-                    <p className="field2">{item.studentLastName}</p>
-                    <p className="field3">{item.subject}</p>
-                    <p className="field4">{item.score}</p>
-                    <p className="field5">{item.date.toDateString()}</p>
+                    <p className="id"><span id="bolded">Id:</span> {item.id}</p>
+                    <p className="field1"><span id="bolded">First Name:</span> {item.studentFirstName}</p>
+                    <p className="field2"><span id="bolded">Last Name:</span> {item.studentLastName}</p>
+                    <p className="field3"><span id="bolded">Subject:</span> {item.subject}</p>
+                    <p className="field4"><span id="bolded">Score:</span> {item.score}</p>
+                    <p className="field5"><span id="bolded">Date:</span> {item.date.toDateString()}</p>
 
                     <button className="deleteButton button" onClick={() => handleDelete(item.id)}>Delete Grade</button>
                 </li>

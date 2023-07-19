@@ -8,8 +8,8 @@ function App() {
 
   let grade1 : Grade = {
     id: 1,
-    studentFirstName: "Mitko",
-    studentLastName: "Didkov",
+    studentFirstName: "Dimitar",
+    studentLastName: "Dimitrov",
     subject: "Matematika",
     score: 4,
     date: new Date(),
@@ -18,8 +18,8 @@ function App() {
 
   let grade2 : Grade = {
     id: 2,
-    studentFirstName: "Monka",
-    studentLastName: "Ludata",
+    studentFirstName: "Gergana",
+    studentLastName: "Vazova",
     subject: "Bulgarski",
     score: 6,
     date: new Date(),
@@ -28,8 +28,8 @@ function App() {
 
   let grade3 : Grade = {
     id: 3,
-    studentFirstName: "Sa6o",
-    studentLastName: "Sa6ov",
+    studentFirstName: "Aleksi",
+    studentLastName: "Aleksievivevich",
     subject: "Istoriq",
     score: 2,
     date: new Date(),
@@ -76,6 +76,7 @@ function App() {
 
         <div className="navbar">
           <h1>Grading System</h1>
+          <img src="grade.png" alt="image" />
         </div>
 
         <div className="content-list">
@@ -86,7 +87,7 @@ function App() {
           <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
         </div>
         
-        <footer>This is footer</footer>
+        <footer>© 2023 Grading System. All rights reserved.</footer>
       </div>
   );
 }

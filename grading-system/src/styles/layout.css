@@ -14,6 +14,7 @@
     grid-area: header;
     background-color: black;
     color: aqua;
+    text-align: center;
 }
 
 .content-list{
@@ -31,6 +32,7 @@ footer{
     background-color: aqua;
 }
 
+
 .button{
     margin: 1em;
     padding: 0.5em;
@@ -41,12 +43,69 @@ footer{
     margin: 0.2em;
     padding: 0.3em 1em 0.3em 1em;
     border-radius: 10px;
+    max-width: 3em;
 }
 
 .button-details:hover{
     background-color: rgb(127, 255, 212, 0.5);
 }
 
-.button:hover{
-    background-color: rgb(127, 255, 212, 0.5);
+.deleteButton:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+
+/*list section specific css*/
+li{
+    border: 1px solid rgb(128, 128, 128);
+    box-shadow: rgba(128, 128, 128, 1);
+    list-style: none;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.content-list h2,
+.content-list li{
+    align-self: center;
+}
+
+.content-list li{
+    min-width: 30em;
+    text-align: center;
+}
+
+#bolded{
+    font-weight: bold;
+}
+
+
+/*details section specific css*/
+.content-details{
+    display: flex;
+    flex-direction: column;
+    text-align:justify;
+}
+
+#field1,
+#field2,
+#field3{
+    max-width: 7em;
+}
+
+#field4{
+    max-width: 2em;
+}
+/* 
+#clearButton{
+    align-self: center;
+} */
+
+
+
+footer{
+    text-align: center;
 }

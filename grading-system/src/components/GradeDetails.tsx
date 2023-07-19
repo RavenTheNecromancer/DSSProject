@@ -60,60 +60,65 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
             <h2>Grade Details:</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                <label htmlFor="studentFirstName">First Name:</label>
-                <input
-                    type="text"
-                    id="field1"
-                    name="studentFirstName"
-                    value={selectedGrade.studentFirstName}
-                    onChange={handleInputChange}
-                    required
-                />
+                    <label className="label" htmlFor="studentFirstName">First Name: </label>
+                    <input
+                        className="input"
+                        type="text"
+                        id="field1"
+                        name="studentFirstName"
+                        value={selectedGrade.studentFirstName}
+                        onChange={handleInputChange}
+                        required
+                    />
                 </div>
                 <div>
-                <label htmlFor="studentLastName">Last Name:</label>
-                <input
-                    type="text"
-                    id="field2"
-                    name="studentLastName"
-                    value={selectedGrade.studentLastName}
-                    onChange={handleInputChange}
-                    required
-                />
+                    <label className="label" htmlFor="studentLastName">Last Name: </label>
+                    <input
+                        className="input"
+                        type="text"
+                        id="field2"
+                        name="studentLastName"
+                        value={selectedGrade.studentLastName}
+                        onChange={handleInputChange}
+                        required
+                    />
                 </div>
                 <div>
-                <label htmlFor="subject">Subject:</label>
-                <input
-                    type="text"
-                    id="field3"
-                    name="subject"
-                    value={selectedGrade.subject}
-                    onChange={handleInputChange}
-                    required
-                />
+                    <label className="label" htmlFor="subject">Subject: </label>
+                    <input
+                        className="input"
+                        type="text"
+                        id="field3"
+                        name="subject"
+                        value={selectedGrade.subject}
+                        onChange={handleInputChange}
+                        required
+                    />
                 </div>
                 <div>
-                <label htmlFor="score">Score:</label>
-                <input
-                    type="number"
-                    id="field4"
-                    name="score"
-                    min="2" max="6"
-                    value={selectedGrade.score}
-                    onChange={handleInputChange}
-                    required
-                />
+                    <label className="label" htmlFor="score">Score: </label>
+                    <input
+                        className="input"
+                        type="number"
+                        id="field4"
+                        name="score"
+                        min="2" max="6"
+                        value={selectedGrade.score}
+                        onChange={handleInputChange}
+                        required
+                    />
                 </div>
                 <div>
-                <label htmlFor="date">Date:</label>
-                <input
-                    type="date"
-                    id="field5"
-                    name="date"
-                    value={selectedGrade.date.toISOString().substring(0, 10)}
-                    onChange={handleDateChange}
-                    required
-                />
+                    <label className="label" htmlFor="date">Date: </label>
+                    <input
+                        className="input"
+                        type="date"
+                        id="field5"
+                        name="date"
+                        value={selectedGrade.date.toISOString().substring(0, 10)}
+                        onChange={handleDateChange}
+                        required
+                    />
                 </div>
                 <button className='button-details' id='saveButton' type='submit'>Save</button>
             </form>
