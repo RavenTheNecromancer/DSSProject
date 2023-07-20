@@ -14,7 +14,7 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
         studentFirstName: "",
         studentLastName: "",
         subject: "",
-        score: 0,
+        score: 2,
         date: new Date(),
         active: true,
     };
@@ -26,10 +26,15 @@ const GradeDetails : React.FC<Props> = (props : Props) => {
             //now updates the details section (previous error => used selectedGrade directly from hooks instead props.selectedGrade)
             setGrade(props.selectedGrade);
         }
-        else{
+        else{ handleClear(); }
+
+        /* if (props.selectedGrade.active === false){
             handleClear();
         }
-    }, [props.selectedGrade])
+        else{
+            setGrade(props.selectedGrade);
+        } */
+    }, [props.onSave])
 
     const handleClear = () => {
         setGrade(emptyGrade);

@@ -37,12 +37,22 @@ function App() {
     active: true,
   };
 
+  let emptyGrade : Grade = {
+    id: -1,
+    studentFirstName: "",
+    studentLastName: "",
+    subject: "",
+    score: 0,
+    date: new Date(),
+    active: true,
+};
+
   //initial grade array
   let gradesOnInitialise = [grade1, grade2, grade3];
 
   //state hooks
   const [grades, setGrades] = useState(gradesOnInitialise);
-  const [selectedGrade, setGrade] = useState<Grade>(grade1);
+  const [selectedGrade, setGrade] = useState<Grade>(emptyGrade);
 
 
   const handleSaveGrade = (grade : Grade) => {
@@ -68,8 +78,15 @@ function App() {
   const handleGradeDelete = (gradeArray : Grade[]) => {
     let idIndex = 1;
     for (let i = 0; i < gradeArray.length; i++) gradeArray[i].id = idIndex++;
-
     return gradeArray;
+  }
+
+  const handleDeleted = (grade : Grade) => {
+    handleGradeSelection(grade);
+    if (grade === null){
+      setGrade(emptyGrade);
+    }
+    return selectedGrade;
   }
 
   return (
@@ -85,7 +102,7 @@ function App() {
         </div>
 
         <div className='content-details'>
-          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
+          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade}/>
         </div>
         
         <footer>© 2023 Grading System. All rights reserved.</footer>
