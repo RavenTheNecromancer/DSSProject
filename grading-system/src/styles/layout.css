@@ -1,6 +1,6 @@
 .content{
     background-color: bisque;
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2em;
@@ -21,16 +21,21 @@
     grid-area: main;
     background-color: aliceblue;
     margin-left: 1em;
+    max-height: 100%;
+    overflow: scroll;
 }
 
-aside{
+.content-details{
     grid-area: aside;
     background-color: aquamarine;
+    max-height: 100%;
 }
 
 footer{
     grid-area: footer;
-    background-color: aqua;
+    background-color: black;
+    color: aqua;
+    
 }
 
 

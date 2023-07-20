@@ -42,7 +42,7 @@ function App() {
     studentFirstName: "",
     studentLastName: "",
     subject: "",
-    score: 0,
+    score: 2,
     date: new Date(),
     active: true,
 };
