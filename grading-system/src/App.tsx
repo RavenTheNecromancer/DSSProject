@@ -81,13 +81,6 @@ function App() {
     return gradeArray;
   }
 
-  const handleDeleted = (grade : Grade) => {
-    handleGradeSelection(grade);
-    if (grade === null){
-      setGrade(emptyGrade);
-    }
-    return selectedGrade;
-  }
 
   return (
       <div className="content">
